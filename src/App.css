@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  color: #3e3e3e;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus,
+input[type="text"]:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 22px); /* Full width minus padding and border */
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+li {
+  background-color: #f9f9f9;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+  background-color: #e74c3c;
+  padding: 6px 12px;
+  margin-left: 5px;
+}
+
+li button:hover {
+  background-color: #c0392b;
+}
+
+.cuz-buttons button {
+  background-color: #ccc;
+  margin: 5px;
+  padding: 10px 20px;
+}
+
+.cuz-buttons button:hover {
+  background-color: #bbb;
+}
+
+button[disabled] {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.cuz-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Mobil cihazlar için */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  button {
+    width: 100%; /* Butonlar mobilde tam genişlikte olsun */
+    padding: 12px;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  input[type="text"] {
+    width: 100%; /* Giriş kutusu da tam genişlikte */
+  }
+
+  .cuz-buttons button {
+    width: 48%; /* Mobilde cüz butonları alt alta gelecek şekilde */
+    margin: 4px;
+  }
+
+  ul {
+    padding-left: 10px;
+  }
+
+  li {
+    padding: 12px;
+    flex-direction: column; /* Liste öğelerini dikey hizalar */
+    align-items: flex-start;
+  }
+
+  li button {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+/* Daha küçük cihazlar için (telefonlar) */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  input[type="text"] {
+    padding: 12px;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .cuz-buttons button {
+    width: 100%; /* Küçük ekranlarda butonlar tamamen geniş olacak */
+    margin: 5px 0;
+  }
+
+  li {
+    padding: 10px;
+    font-size: 14px; /* Liste öğelerinin fontunu küçültüyoruz */
+  }
+}
